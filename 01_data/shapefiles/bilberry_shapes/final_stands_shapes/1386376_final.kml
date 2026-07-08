@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="1386376_final" id="1386376_final">
+	<SimpleField name="comment" type="string"></SimpleField>
+	<SimpleField name="basal" type="float"></SimpleField>
+	<SimpleField name="other" type="float"></SimpleField>
+	<SimpleField name="ratio" type="float"></SimpleField>
+	<SimpleField name="tmp.id" type="float"></SimpleField>
+	<SimpleField name="stand" type="float"></SimpleField>
+	<SimpleField name="selected" type="string"></SimpleField>
+	<SimpleField name="new_id" type="string"></SimpleField>
+</Schema>
+<Folder><name>1386376_final</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="tmp.id">2</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2219669905346,56.3890967923754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03125</SimpleData>
+		<SimpleData name="tmp.id">4</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2214716440662,56.387970596758</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03125</SimpleData>
+		<SimpleData name="tmp.id">5</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2209926917469,56.3892164621174</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.068965517241379</SimpleData>
+		<SimpleData name="tmp.id">6</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.22192826426,56.3902016669008</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.068965517241379</SimpleData>
+		<SimpleData name="tmp.id">8</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2265903473866,56.3903476283895</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">31</SimpleData>
+		<SimpleData name="other">0</SimpleData>
+		<SimpleData name="ratio">0</SimpleData>
+		<SimpleData name="tmp.id">9</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2284547128904,56.3902693937001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">preferably over Nr 7, either 7 or 10</SimpleData>
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.21875</SimpleData>
+		<SimpleData name="tmp.id">10</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B10</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2232090281812,56.3901468024663</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">30</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.033333333333333</SimpleData>
+		<SimpleData name="tmp.id">12</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B11</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2258300689237,56.3894983239638</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.027777777777778</SimpleData>
+		<SimpleData name="tmp.id">16</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B12</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2262404265752,56.3892313440754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.09375</SimpleData>
+		<SimpleData name="tmp.id">17</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2220069963239,56.3879290327967</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="tmp.id">18</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.22285681326,56.3859667120855</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1386376_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">27</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.037037037037037</SimpleData>
+		<SimpleData name="tmp.id">20</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="selected">Yes</SimpleData>
+		<SimpleData name="new_id">B4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2245486770784,56.3855999453261</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

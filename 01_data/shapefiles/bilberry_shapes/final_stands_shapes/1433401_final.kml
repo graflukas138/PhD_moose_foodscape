@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="1433401_final" id="1433401_final">
+	<SimpleField name="comment" type="string"></SimpleField>
+	<SimpleField name="basal" type="float"></SimpleField>
+	<SimpleField name="other" type="float"></SimpleField>
+	<SimpleField name="ratio" type="float"></SimpleField>
+	<SimpleField name="tmp.id" type="float"></SimpleField>
+	<SimpleField name="stand" type="float"></SimpleField>
+	<SimpleField name="selected" type="string"></SimpleField>
+	<SimpleField name="new_id" type="string"></SimpleField>
+</Schema>
+<Folder><name>1433401_final</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1433401_final">
+		<SimpleData name="comment">good, gap in northwest</SimpleData>
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03448275862069</SimpleData>
+		<SimpleData name="tmp.id">1</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">C5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9487626017491,57.090543147829</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1433401_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.103448275862069</SimpleData>
+		<SimpleData name="tmp.id">4</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">C4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9489260120432,57.0917110510974</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1433401_final">
+		<SimpleData name="comment">good, gap in north east</SimpleData>
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.114285714285714</SimpleData>
+		<SimpleData name="tmp.id">5</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">C3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.948777270301,57.0918726908456</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1433401_final">
+		<SimpleData name="comment">good gap in North</SimpleData>
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="tmp.id">6</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">C1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9495032676913,57.0919448522316</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1433401_final">
+		<SimpleData name="comment">okay</SimpleData>
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03448275862069</SimpleData>
+		<SimpleData name="tmp.id">7</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">C2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9498335420267,57.0917743010404</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1433401_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.125</SimpleData>
+		<SimpleData name="tmp.id">9</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">C6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9507425043647,57.0907595420131</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

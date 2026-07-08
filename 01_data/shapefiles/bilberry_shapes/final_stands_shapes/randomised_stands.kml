@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="randomised_stands" id="randomised_stands">
+	<SimpleField name="basal" type="float"></SimpleField>
+	<SimpleField name="other" type="float"></SimpleField>
+	<SimpleField name="ratio" type="float"></SimpleField>
+	<SimpleField name="stand" type="float"></SimpleField>
+	<SimpleField name="new_id" type="string"></SimpleField>
+	<SimpleField name="stand_id" type="string"></SimpleField>
+	<SimpleField name="plot_id" type="string"></SimpleField>
+	<SimpleField name="treatment" type="string"></SimpleField>
+	<SimpleField name="full_name" type="string"></SimpleField>
+</Schema>
+<Folder><name>randomised_stands</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">31</SimpleData>
+		<SimpleData name="other">0</SimpleData>
+		<SimpleData name="ratio">0</SimpleData>
+		<SimpleData name="stand">1386249</SimpleData>
+		<SimpleData name="new_id">I5</SimpleData>
+		<SimpleData name="stand_id">I</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.264840709564,56.4009305776043</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">34</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.088235294117647</SimpleData>
+		<SimpleData name="stand">1386249</SimpleData>
+		<SimpleData name="new_id">I6</SimpleData>
+		<SimpleData name="stand_id">I</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2648670508972,56.4012451962624</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">33</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.060606060606061</SimpleData>
+		<SimpleData name="stand">1386249</SimpleData>
+		<SimpleData name="new_id">I4</SimpleData>
+		<SimpleData name="stand_id">I</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2632017736845,56.400220050988</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.138888888888889</SimpleData>
+		<SimpleData name="stand">1386249</SimpleData>
+		<SimpleData name="new_id">I1</SimpleData>
+		<SimpleData name="stand_id">I</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2642881527305,56.4010171480152</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">33</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.060606060606061</SimpleData>
+		<SimpleData name="stand">1386249</SimpleData>
+		<SimpleData name="new_id">I3</SimpleData>
+		<SimpleData name="stand_id">I</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2627368757476,56.400801290693</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.0625</SimpleData>
+		<SimpleData name="stand">1386249</SimpleData>
+		<SimpleData name="new_id">I2</SimpleData>
+		<SimpleData name="stand_id">I</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2632708030269,56.4008404015847</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B5</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2219669905346,56.3890967923754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03125</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B1</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2214716440662,56.387970596758</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03125</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B6</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2209926917469,56.3892164621174</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.068965517241379</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B7</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">7</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.22192826426,56.3902016669008</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.068965517241379</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B8</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">8</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2265903473866,56.3903476283895</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">31</SimpleData>
+		<SimpleData name="other">0</SimpleData>
+		<SimpleData name="ratio">0</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B9</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">9</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2284547128904,56.3902693937001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.21875</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B10</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">10</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2232090281812,56.3901468024663</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">30</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.033333333333333</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B11</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">11</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2258300689237,56.3894983239638</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.027777777777778</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B12</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">12</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2262404265752,56.3892313440754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.09375</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B2</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2220069963239,56.3879290327967</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B3</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.22285681326,56.3859667120855</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">27</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.037037037037037</SimpleData>
+		<SimpleData name="stand">1386376</SimpleData>
+		<SimpleData name="new_id">B4</SimpleData>
+		<SimpleData name="stand_id">B</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.2245486770784,56.3855999453261</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">6</SimpleData>
+		<SimpleData name="ratio">0.166666666666667</SimpleData>
+		<SimpleData name="stand">1388614</SimpleData>
+		<SimpleData name="new_id">A4</SimpleData>
+		<SimpleData name="stand_id">A</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4328464338211,56.2993610887522</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">30</SimpleData>
+		<SimpleData name="other">6</SimpleData>
+		<SimpleData name="ratio">0.2</SimpleData>
+		<SimpleData name="stand">1388614</SimpleData>
+		<SimpleData name="new_id">A5</SimpleData>
+		<SimpleData name="stand_id">A</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4299993735193,56.2995636516917</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">40</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.175</SimpleData>
+		<SimpleData name="stand">1388614</SimpleData>
+		<SimpleData name="new_id">A3</SimpleData>
+		<SimpleData name="stand_id">A</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4319054933373,56.2985212017334</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">6</SimpleData>
+		<SimpleData name="ratio">0.171428571428571</SimpleData>
+		<SimpleData name="stand">1388614</SimpleData>
+		<SimpleData name="new_id">A2</SimpleData>
+		<SimpleData name="stand_id">A</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4305896237637,56.2989913472647</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">33</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03030303030303</SimpleData>
+		<SimpleData name="stand">1388614</SimpleData>
+		<SimpleData name="new_id">A6</SimpleData>
+		<SimpleData name="stand_id">A</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4291746293213,56.2996047769116</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.15625</SimpleData>
+		<SimpleData name="stand">1388614</SimpleData>
+		<SimpleData name="new_id">A1</SimpleData>
+		<SimpleData name="stand_id">A</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4286243704714,56.2985779864518</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.114285714285714</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="new_id">C3</SimpleData>
+		<SimpleData name="stand_id">C</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.948777270301,57.0918726908456</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="new_id">C1</SimpleData>
+		<SimpleData name="stand_id">C</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9495032676913,57.0919448522316</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.125</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="new_id">C6</SimpleData>
+		<SimpleData name="stand_id">C</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9507425043647,57.0907595420131</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03448275862069</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="new_id">C5</SimpleData>
+		<SimpleData name="stand_id">C</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9487626017491,57.090543147829</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03448275862069</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="new_id">C2</SimpleData>
+		<SimpleData name="stand_id">C</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9498335420267,57.0917743010404</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.103448275862069</SimpleData>
+		<SimpleData name="stand">1433401</SimpleData>
+		<SimpleData name="new_id">C4</SimpleData>
+		<SimpleData name="stand_id">C</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9489260120432,57.0917110510974</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.035714285714286</SimpleData>
+		<SimpleData name="stand">1433682</SimpleData>
+		<SimpleData name="new_id">D5</SimpleData>
+		<SimpleData name="stand_id">D</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9410241041021,57.0588823061069</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.137931034482759</SimpleData>
+		<SimpleData name="stand">1433682</SimpleData>
+		<SimpleData name="new_id">D6</SimpleData>
+		<SimpleData name="stand_id">D</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9392280945018,57.058189725641</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">30</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.066666666666667</SimpleData>
+		<SimpleData name="stand">1433682</SimpleData>
+		<SimpleData name="new_id">D1</SimpleData>
+		<SimpleData name="stand_id">D</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9452263056058,57.0603215581547</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.15625</SimpleData>
+		<SimpleData name="stand">1433682</SimpleData>
+		<SimpleData name="new_id">D3</SimpleData>
+		<SimpleData name="stand_id">D</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9430357742438,57.0587574691204</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.071428571428571</SimpleData>
+		<SimpleData name="stand">1433682</SimpleData>
+		<SimpleData name="new_id">D2</SimpleData>
+		<SimpleData name="stand_id">D</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9440900809205,57.0593508487183</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">33</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.090909090909091</SimpleData>
+		<SimpleData name="stand">1433682</SimpleData>
+		<SimpleData name="new_id">D4</SimpleData>
+		<SimpleData name="stand_id">D</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.9412560217492,57.058190692797</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">30</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.166666666666667</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="new_id">E4</SimpleData>
+		<SimpleData name="stand_id">E</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0245020817592,56.9360894474882</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">41</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.170731707317073</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="new_id">E2</SimpleData>
+		<SimpleData name="stand_id">E</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0239927815005,56.9362961685985</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.083333333333333</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="new_id">E3</SimpleData>
+		<SimpleData name="stand_id">E</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0234831707933,56.9360177743134</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.055555555555556</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="new_id">E6</SimpleData>
+		<SimpleData name="stand_id">E</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0244047841456,56.9380838212273</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">43</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.023255813953488</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="new_id">E1</SimpleData>
+		<SimpleData name="stand_id">E</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0243048410313,56.9360266009073</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="new_id">E5</SimpleData>
+		<SimpleData name="stand_id">E</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0246173871898,56.9365026695677</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.111111111111111</SimpleData>
+		<SimpleData name="stand">1436613</SimpleData>
+		<SimpleData name="new_id">F1</SimpleData>
+		<SimpleData name="stand_id">F</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0208825201419,56.9285169407321</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">44</SimpleData>
+		<SimpleData name="other">0</SimpleData>
+		<SimpleData name="ratio">0</SimpleData>
+		<SimpleData name="stand">1436613</SimpleData>
+		<SimpleData name="new_id">F6</SimpleData>
+		<SimpleData name="stand_id">F</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0190089895515,56.9275110771809</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">34</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.205882352941176</SimpleData>
+		<SimpleData name="stand">1436613</SimpleData>
+		<SimpleData name="new_id">F2</SimpleData>
+		<SimpleData name="stand_id">F</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0209813874728,56.9290289889112</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.21875</SimpleData>
+		<SimpleData name="stand">1436613</SimpleData>
+		<SimpleData name="new_id">F5</SimpleData>
+		<SimpleData name="stand_id">F</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0204876538867,56.9275198272482</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.0625</SimpleData>
+		<SimpleData name="stand">1436613</SimpleData>
+		<SimpleData name="new_id">F3</SimpleData>
+		<SimpleData name="stand_id">F</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0214742784714,56.9290019544646</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">37</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.027027027027027</SimpleData>
+		<SimpleData name="stand">1436613</SimpleData>
+		<SimpleData name="new_id">F4</SimpleData>
+		<SimpleData name="stand_id">F</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0214745003699,56.9293882488454</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">27</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.111111111111111</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H6</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0632562095076,56.7247963445407</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">8</SimpleData>
+		<SimpleData name="ratio">0.25</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H10</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">10</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0612638880753,56.7255879218156</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H7</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">7</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0626843328892,56.7248325689852</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03448275862069</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H9</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">9</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0617042814865,56.7250846068536</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.107142857142857</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H5</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0635991590378,56.7246703955878</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">6</SimpleData>
+		<SimpleData name="ratio">0.171428571428571</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H8</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">8</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0622761628757,56.7250483869057</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.114285714285714</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H4</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.063500825441,56.7244997518177</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.083333333333333</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H2</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0644645549162,56.7242746599052</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">27</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.037037037037037</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H11</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">11</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0612488465311,56.7263874951824</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">34</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.058823529411765</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H1</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0637933190662,56.7235293423104</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.09375</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H3</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.064955352367,56.7246068090484</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">31</SimpleData>
+		<SimpleData name="other">0</SimpleData>
+		<SimpleData name="ratio">0</SimpleData>
+		<SimpleData name="stand">1446114</SimpleData>
+		<SimpleData name="new_id">H12</SimpleData>
+		<SimpleData name="stand_id">H</SimpleData>
+		<SimpleData name="plot_id">12</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0630128518482,56.7258475827438</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">4</SimpleData>
+		<SimpleData name="ratio">0.114285714285714</SimpleData>
+		<SimpleData name="stand">2159091</SimpleData>
+		<SimpleData name="new_id">G4</SimpleData>
+		<SimpleData name="stand_id">G</SimpleData>
+		<SimpleData name="plot_id">4</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0697339838161,56.7372535315496</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.09375</SimpleData>
+		<SimpleData name="stand">2159091</SimpleData>
+		<SimpleData name="new_id">G6</SimpleData>
+		<SimpleData name="stand_id">G</SimpleData>
+		<SimpleData name="plot_id">6</SimpleData>
+		<SimpleData name="treatment">a</SimpleData>
+		<SimpleData name="full_name">approximatly 60% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0688012846035,56.736732985158</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">31</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.096774193548387</SimpleData>
+		<SimpleData name="stand">2159091</SimpleData>
+		<SimpleData name="new_id">G1</SimpleData>
+		<SimpleData name="stand_id">G</SimpleData>
+		<SimpleData name="plot_id">1</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.067653498854,56.7347571610587</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">32</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03125</SimpleData>
+		<SimpleData name="stand">2159091</SimpleData>
+		<SimpleData name="new_id">G5</SimpleData>
+		<SimpleData name="stand_id">G</SimpleData>
+		<SimpleData name="plot_id">5</SimpleData>
+		<SimpleData name="treatment">b</SimpleData>
+		<SimpleData name="full_name">approximatly 30% thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0698483922531,56.7372444836355</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">28</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.035714285714286</SimpleData>
+		<SimpleData name="stand">2159091</SimpleData>
+		<SimpleData name="new_id">G3</SimpleData>
+		<SimpleData name="stand_id">G</SimpleData>
+		<SimpleData name="plot_id">3</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0693416195586,56.737226798771</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#randomised_stands">
+		<SimpleData name="basal">29</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.03448275862069</SimpleData>
+		<SimpleData name="stand">2159091</SimpleData>
+		<SimpleData name="new_id">G2</SimpleData>
+		<SimpleData name="stand_id">G</SimpleData>
+		<SimpleData name="plot_id">2</SimpleData>
+		<SimpleData name="treatment">c</SimpleData>
+		<SimpleData name="full_name">no thinning</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0684557441462,56.7354844169874</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

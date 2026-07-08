@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="haras" id="haras">
+	<SimpleField name="ID" type="float"></SimpleField>
+	<SimpleField name="N" type="float"></SimpleField>
+	<SimpleField name="E" type="float"></SimpleField>
+</Schema>
+<Folder><name>haras</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">1</SimpleData>
+		<SimpleData name="N">6239845</SimpleData>
+		<SimpleData name="E">464525</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4267141570656,56.3020462299463</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">2</SimpleData>
+		<SimpleData name="N">6239705</SimpleData>
+		<SimpleData name="E">464551</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4271531192578,56.3007904062089</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">3</SimpleData>
+		<SimpleData name="N">6239821</SimpleData>
+		<SimpleData name="E">464582</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4276384643174,56.301834872269</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">4</SimpleData>
+		<SimpleData name="N">6239754</SimpleData>
+		<SimpleData name="E">464529</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4267910344336,56.301228980249</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">5</SimpleData>
+		<SimpleData name="N">6239458</SimpleData>
+		<SimpleData name="E">464640</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4286243704714,56.2985779864518</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">6</SimpleData>
+		<SimpleData name="N">6239503</SimpleData>
+		<SimpleData name="E">464762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4305896237637,56.2989913472647</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">7</SimpleData>
+		<SimpleData name="N">6239450</SimpleData>
+		<SimpleData name="E">464843</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4319054933373,56.2985212017334</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">8</SimpleData>
+		<SimpleData name="N">6239543</SimpleData>
+		<SimpleData name="E">464902</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4328464338211,56.2993610887522</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">9</SimpleData>
+		<SimpleData name="N">6239567</SimpleData>
+		<SimpleData name="E">464726</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4299993735193,56.2995636516917</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#haras">
+		<SimpleData name="ID">10</SimpleData>
+		<SimpleData name="N">6239572</SimpleData>
+		<SimpleData name="E">464675</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>14.4291746293213,56.2996047769116</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

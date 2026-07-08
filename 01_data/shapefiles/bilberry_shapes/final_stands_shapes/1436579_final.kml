@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="1436579_final" id="1436579_final">
+	<SimpleField name="comment" type="string"></SimpleField>
+	<SimpleField name="basal" type="float"></SimpleField>
+	<SimpleField name="other" type="float"></SimpleField>
+	<SimpleField name="ratio" type="float"></SimpleField>
+	<SimpleField name="tmp.id" type="float"></SimpleField>
+	<SimpleField name="stand" type="float"></SimpleField>
+	<SimpleField name="selected" type="string"></SimpleField>
+	<SimpleField name="new_id" type="string"></SimpleField>
+</Schema>
+<Folder><name>1436579_final</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1436579_final">
+		<SimpleData name="comment">3 or 2, maybe both</SimpleData>
+		<SimpleData name="basal">30</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.166666666666667</SimpleData>
+		<SimpleData name="tmp.id">3</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">E4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0245020817592,56.9360894474882</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1436579_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">35</SimpleData>
+		<SimpleData name="other">5</SimpleData>
+		<SimpleData name="ratio">0.142857142857143</SimpleData>
+		<SimpleData name="tmp.id">4</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">E5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0246173871898,56.9365026695677</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1436579_final">
+		<SimpleData name="comment">good</SimpleData>
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">2</SimpleData>
+		<SimpleData name="ratio">0.055555555555556</SimpleData>
+		<SimpleData name="tmp.id">5</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">E6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0244047841456,56.9380838212273</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1436579_final">
+		<SimpleData name="comment">okay</SimpleData>
+		<SimpleData name="basal">43</SimpleData>
+		<SimpleData name="other">1</SimpleData>
+		<SimpleData name="ratio">0.023255813953488</SimpleData>
+		<SimpleData name="tmp.id">6</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">E1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0243048410313,56.9360266009073</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1436579_final">
+		<SimpleData name="comment">okay, gap in the north</SimpleData>
+		<SimpleData name="basal">36</SimpleData>
+		<SimpleData name="other">3</SimpleData>
+		<SimpleData name="ratio">0.083333333333333</SimpleData>
+		<SimpleData name="tmp.id">7</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">E3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0234831707933,56.9360177743134</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#1436579_final">
+		<SimpleData name="comment">okay</SimpleData>
+		<SimpleData name="basal">41</SimpleData>
+		<SimpleData name="other">7</SimpleData>
+		<SimpleData name="ratio">0.170731707317073</SimpleData>
+		<SimpleData name="tmp.id">8</SimpleData>
+		<SimpleData name="stand">1436579</SimpleData>
+		<SimpleData name="selected">yes</SimpleData>
+		<SimpleData name="new_id">E2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.0239927815005,56.9362961685985</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
