@@ -113,8 +113,17 @@ ggsave(plot=last_plot(),
        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM.jpg")
 
 
-
-
+rand = track %>%
+  filter(state == "Traveling") %>%
+  mutate(id = row_number()) %>%
+  crossing(rand = 1:2) %>%
+  group_by(row_number()) %>% 
+  mutate(
+    dx = rnorm(1, 0, 50),
+    dy = rnorm(1, 0, 20),
+    x2 = x + dx ,
+    y2 = y + dy
+  )
 
 obs_points <- track %>%
   transmute(
@@ -205,8 +214,8 @@ ggplot() +
     ),
     legend.key = element_blank()
   ) +
-  xlim(c(min(c(track$x, rand$x2)), max(c(track$x, rand$x2)))) +
-  ylim(c(min(c(track$y, rand$y2)), max(c(track$y, rand$y2))))
+  xlim(c(min(c(track$x, track$x)), max(c(track$x, track$x)))) +
+  ylim(c(min(c(track$y, track$y)), max(c(track$y, track$y))))
 
 
 
@@ -216,3 +225,4 @@ ggsave(plot=last_plot(),
        width=5,
        height=5,
        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM_issa.jpg")
+
