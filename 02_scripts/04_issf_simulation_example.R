@@ -173,7 +173,8 @@ p1 <- ggplot(habitat_df) +
        y="") +
   scale_fill_viridis_c() +
   ggtitle("Habitat selection kernel")+
-  theme(legend.position = "bottom")
+  theme(legend.position = "none",
+        axis.text = element_blank()) 
 
 
 # Plot movement kernel
@@ -190,7 +191,8 @@ p2 <- ggplot(movement_df) +
        y="") +
   scale_fill_viridis_c() +
   ggtitle("Movement kernel")+
-  theme(legend.position = "bottom")
+  theme(legend.position = "none",
+        axis.text = element_blank()) 
 
 
 # Plot joint kernel
@@ -207,7 +209,8 @@ p3 <- ggplot(joint_df) +
        y="") +
   scale_fill_viridis_c() +
   ggtitle("Joint movement process")+
-  theme(legend.position = "bottom")
+  theme(legend.position = "none",
+        axis.text = element_blank()) 
 
 
 # Combine

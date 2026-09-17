@@ -84,7 +84,7 @@ ggplot(track, aes(x,y, color=state,
   scale_color_manual(values=c(
     Resting   ="#5B4636",
     Foraging  ="#d95f02",
-    Traveling ="#6C757D"
+    Traveling ="olivedrab"
   )) +
   theme_classic(base_size = 15) +
   labs(
@@ -113,5 +113,106 @@ ggsave(plot=last_plot(),
        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM.jpg")
 
 
-## add iSSA figure?
 
+
+
+obs_points <- track %>%
+  transmute(
+    x = x,
+    y = y,
+    component = "Observed location"
+  )
+
+rand_points <- rand %>%
+  transmute(
+    x = x2,
+    y = y2,
+    component = "Available location"
+  )
+
+points_df <- bind_rows(obs_points, rand_points)
+obs_steps <- track %>%
+  filter(state == "Traveling") %>%
+  mutate(
+    xend = lead(x),
+    yend = lead(y),
+    component = "Observed step"
+  ) %>%
+  filter(!is.na(xend))
+
+rand_steps <- rand %>%
+  transmute(
+    x = x,
+    y = y,
+    xend = x2,
+    yend = y2,
+    component = "Available step"
+  )
+
+steps_df <- bind_rows(obs_steps, rand_steps)
+ggplot() +
+  geom_pointpath(data = track, aes(x,y, color=state,
+             group="1"))+
+  scale_color_manual(values=c(
+    Resting   ="black",
+    Foraging  ="black",
+    Traveling ="olivedrab"
+  ))+  guides(color=F)+
+
+  ggnewscale::new_scale_color() +
+  # steps (observed + available)
+  geom_segment(
+    data = steps_df %>% filter(component=="Available step"),
+    aes(x = x,y = y,
+        xend = xend,
+        yend = yend,
+    ),colour = "black",linewidth = 0.6,
+    linetype="dotted") +
+  
+  # locations (observed + available)
+  geom_point(
+    data = steps_df,
+    aes(
+      x = x,
+      y = y,
+      shape =component,
+      color=component),
+    size = 2
+  ) +
+  
+  # locations (observed + available)
+  geom_point(
+    data = steps_df,
+    aes(
+      x = xend,
+      y = yend,
+      shape =component,
+      color=component),
+    size = 2
+  ) +
+  scale_color_manual(values=c( "#5B4636","olivedrab"),
+                     name="availability domain")+
+  scale_shape(name="availability domain")+
+  theme_void(base_size = 15) +
+  
+  theme(
+    panel.background = element_rect(fill = "white"),
+    legend.position = c(0.12, 0.88),
+    legend.justification = c(0, 1),
+    legend.background = element_rect(
+      fill = scales::alpha("white", 0.7),
+      colour = NA
+    ),
+    legend.key = element_blank()
+  ) +
+  xlim(c(min(c(track$x, rand$x2)), max(c(track$x, rand$x2)))) +
+  ylim(c(min(c(track$y, rand$y2)), max(c(track$y, rand$y2))))
+
+
+
+ggsave(plot=last_plot(),
+       device = "png",
+       dpi=500,
+       width=5,
+       height=5,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM_issa.jpg")
