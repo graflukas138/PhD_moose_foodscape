@@ -170,8 +170,12 @@ p1 <- ggplot(habitat_df) +
   ) +
   theme_bw() +
   labs(x="",
-       y="") +
-  scale_fill_viridis_c() +
+       y="")  +
+  scale_fill_gradient2(name="perfect seperation",
+                       low=scales::col_darker("olivedrab4"),
+                       high="firebrick4",
+                       mid="white",
+                       na.value = "transparent")+
   ggtitle("Habitat selection kernel")+
   theme(legend.position = "none",
         axis.text = element_blank()) 
@@ -189,7 +193,11 @@ p2 <- ggplot(movement_df) +
   theme_bw()+
   labs(x="",
        y="") +
-  scale_fill_viridis_c() +
+  scale_fill_gradient2(name="perfect seperation",
+                       low=scales::col_darker("olivedrab4"),
+                       high="firebrick4",
+                       #mid="white",
+                       na.value = "transparent") +
   ggtitle("Movement kernel")+
   theme(legend.position = "none",
         axis.text = element_blank()) 
@@ -206,8 +214,12 @@ p3 <- ggplot(joint_df) +
   ) +
   theme_bw()+
   labs(x="",
-       y="") +
-  scale_fill_viridis_c() +
+       y="")  +
+  scale_fill_gradient2(name="perfect seperation",
+                       low=scales::col_darker("olivedrab4"),
+                       high="firebrick4",
+                       #mid="white",
+                       na.value = "transparent") +
   ggtitle("Joint movement process")+
   theme(legend.position = "none",
         axis.text = element_blank()) 
@@ -383,7 +395,7 @@ ggsave2(plot=last_plot(),
 ggsave2(plot=last_plot(),
         device = "png",
         dpi=600,
-        width = 12,
+        width = 15,
         height =6,
         "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process_only_rasters.png")
 
