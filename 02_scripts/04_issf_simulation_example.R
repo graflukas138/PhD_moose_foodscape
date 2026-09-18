@@ -5,6 +5,56 @@ library(patchwork)
 library(amt)
 library(sf)
 
+## figures from different chapters
+
+
+library(amt)
+library(tidyverse)
+library(vroom)
+library(data.table)
+library(terra)
+library(sf)
+library(ggh4x)
+library(tidyterra)
+library(momentuHMM)
+library(corrplot)
+library(lubridate)
+library(MetBrewer)
+library(cowplot)
+
+library(showtext)
+library(ggplot2)
+library(extrafont)
+
+font_import()
+
+loadfonts()
+font_add_google("EB Garamond", "EB Garamond")
+showtext_auto()
+#extrafont::font_import()
+extrafont::loadfonts(device = "pdf")
+set_null_device(cairo_pdf)
+
+showtext_auto()
+theme_set(theme(text = element_text(family="EB Garamond")))
+
+
+theme_set(theme_bw())
+theme_set(
+  theme_get() +
+    theme(
+      text = element_text(family = "EB Garamond"),
+      plot.title = element_text(family = "EB Garamond"),
+      plot.subtitle = element_text(family = "EB Garamond"),
+      plot.caption = element_text(family = "EB Garamond"),
+      axis.title = element_text(family = "EB Garamond"),
+      axis.text = element_text(family = "EB Garamond"),
+      legend.title = element_text(family = "EB Garamond"),
+      legend.text = element_text(family = "EB Garamond"),
+      strip.text = element_text(family = "EB Garamond")
+    )
+)
+
 # ------------------------------------------------------------
 # 1. Create movement kernel raster
 # ------------------------------------------------------------
@@ -168,7 +218,6 @@ p1 <- ggplot(habitat_df) +
       fill = value
     )
   ) +
-  theme_bw() +
   labs(x="",
        y="")  +
   scale_fill_gradient2(name="perfect seperation",
@@ -190,7 +239,6 @@ p2 <- ggplot(movement_df) +
       fill = value
     )
   ) +
-  theme_bw()+
   labs(x="",
        y="") +
   scale_fill_gradient2(name="perfect seperation",
@@ -212,7 +260,6 @@ p3 <- ggplot(joint_df) +
       fill = value
     )
   ) +
-  theme_bw()+
   labs(x="",
        y="")  +
   scale_fill_gradient2(name="perfect seperation",
@@ -269,7 +316,6 @@ p4 = expand.grid(sl = seq(1, 1000, length.out = 100),
   geom_line()  +
   xlab("Step Length (m)") +
   ylab("Probability Density") +
-  theme_bw()+ 
   ylim(c(0, 0.004))+
   xlim(c(00, 1000));p4
 
@@ -304,8 +350,7 @@ p5= expand.grid(ta = seq(-pi, pi, length.out = 100),
   ylab("Probability Density") +
   scale_x_continuous(breaks = c(-pi, -pi/2, 0, pi/2, pi),
                      labels = expression(-pi, -pi/2, 0, pi/2, pi)) +
-  coord_cartesian(ylim = c(0, 0.25)) +
-  theme_bw()
+  coord_cartesian(ylim = c(0, 0.25))
 
 coef_df <- data.frame(
   term = c("beta", "beta2"),
@@ -318,7 +363,7 @@ coef_df <- data.frame(
 p6 = ggplot(coef_df, aes(term, estimate, ymin=lower, ymax=upper)) +
   geom_pointrange()+
   geom_hline(yintercept = 0, linetype="dashed") +
-  theme_bw()+scale_x_discrete(
+  scale_x_discrete(
     labels = c(
       beta = expression(beta[1]),
       beta2 = expression(beta[2])
@@ -331,51 +376,102 @@ library(cowplot)
 
 top_row <- plot_grid(
   plot_grid(p6,
-  plot_grid(p4, p5, nrow = 2),
+  plot_grid(p4, p5, nrow = 2,
+            align="hv"),
   ncol=2),
-  plot_grid(p1, p2, ncol = 2),
-  nrow = 2
+  plot_grid(p1, p2, ncol = 2,
+            align = "hv"),
+  nrow = 2,
+  align="hv"
 );top_row
 
-ggsave2(plot=last_plot(),
-        device = "png",
-        dpi=300,
-        width = 8,
-        height = 8,
-        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process.png")
+sect_a = plot_grid(p4,p5,p2,
+          nrow=3,
+          rel_heights = c(.25,.25,.5),
+          align = "hv")
+
+sect_b = plot_grid(p6,p1,align = "hv",
+                   nrow=2)
+
+plot_grid(sect_b, sect_a, align = "hv")
 
 ggsave2(plot=last_plot(),
-        device = "png",
-        dpi=300,
+        device = "svg",
+        dpi=600,
         width = 8,
         height = 8,
-        "03_figures/movement_process.png")
+        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process.svg")
 
 
-plot_grid(
-  top_row,
-  plot_grid(ggplot()+theme_void(), p3,
-            nrow=2,
-            align = "hv"),
-  nrow = 1,
-  ncol =2,
-  rel_widths = c(.6666, .3333),
-  align="hv"
+ggsave2(plot=last_plot(),
+        device = "pdf",
+        dpi=600,
+        width = 8,
+        height = 8,
+        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process.pdf")
+
+
+ggsave2(plot=last_plot(),
+        device = "svg",
+        dpi=500,
+        width = 8,
+        height = 8,
+        "03_figures/movement_process.svg")
+
+
+ggsave2(plot=last_plot(),
+        device = "pdf",
+        dpi=500,
+        width = 8,
+        height = 8,
+        "03_figures/movement_process.pdf")
+
+
+# Align all individual plots
+aligned <- align_plots(
+  p6, p5, p4, p1, p2, p3,
+  align = "hv",
+  axis = "tlbr"
 )
 
-ggsave2(plot=last_plot(),
-        device = "png",
-        dpi=600,
-        width = 12,
-        height = 8,
-        "03_figures/movement_process_full.png")
+plot_grid(
+  aligned[[1]],
+  plot_grid(
+    aligned[[3]],
+    aligned[[2]],
+    ncol = 1,
+    rel_heights = c(1, 1)
+  ),
+  ggplot() + theme_void(),
+  aligned[[4]],
+  aligned[[5]],
+  aligned[[6]],
+  nrow = 2
+)
+
 
 ggsave2(plot=last_plot(),
-        device = "png",
+        device = "svg",
         dpi=600,
         width = 12,
         height = 8,
-        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process_full.png")
+        "03_figures/movement_process_full.svg")
+
+
+
+ggsave2(plot=last_plot(),
+        device = "pdf",
+        dpi=600,
+        width = 12,
+        height = 8,
+        "03_figures/movement_process_full.pdf")
+
+ggsave2(plot=last_plot(),
+        device = "svg",
+        dpi=600,
+        width = 12,
+        height = 8,
+        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process_full.svg")
 
 
 
@@ -386,16 +482,22 @@ plot_grid(
 
 
 ggsave2(plot=last_plot(),
-        device = "png",
+        device = "svg",
         dpi=600,
         width = 12,
         height = 6,
-        "03_figures/movement_process_only_rasters.png")
+        "03_figures/movement_process_only_rasters.svg")
 
 ggsave2(plot=last_plot(),
-        device = "png",
+        device = "pdf",
         dpi=600,
         width = 15,
         height =6,
-        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process_only_rasters.png")
+        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process_only_rasters.pdf")
 
+ggsave2(plot=last_plot(),
+        device = "svg",
+        dpi=600,
+        width = 15,
+        height =6,
+        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/movement_process_only_rasters.svg")

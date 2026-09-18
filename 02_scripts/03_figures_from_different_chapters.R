@@ -32,10 +32,14 @@ showtext_auto()
 theme_set(theme(text = element_text(family="EB Garamond")))
 set.seed(420)
 
-setwd("C:/Users/lugf0001/Documents/PhD_moose_foodscape/")
-
 unspecific= read_rds( "01_data/dat_from_chapter_III/data//unspecific_ISSA.rds")
 hmm_iSSA= read_rds( "01_data/dat_from_chapter_III/data//hmm_ISSA.rds")
+
+
+classes = read.csv( "D:/viltfoder_kartor_data/phd_project/forage_RS/02_data/nmd/classes_lukas.csv",sep= ";") %>% 
+  rename(nmd_end = nmd) %>% 
+  mutate(open = ifelse(class_new %in% c(1,2,3,4), "forest", "open"))
+
 
 
 hmm_iSSA$class <- sapply(hmm_iSSA$steps, function(x) class(x)[1])
@@ -176,7 +180,7 @@ hmm_mods  %>%# dplyr::select(-data, -steps)%>%
 
 cowplot::save_plot("C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/HMM_model_selection.svg",
                       device = "svg",
-                      dpi=300, plot=last_plot(),
+                      dpi=600, plot=last_plot(),
                       scale=1.25,
                       base_width = 8, base_height = 8)
 
@@ -263,7 +267,7 @@ n_boot =500;option="Hokusai1";hmm_mods %>%
 
 cowplot::save_plot("C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/incremental_selection_young_forest.svg",
                    device = "svg",
-                   dpi=300, plot=last_plot(),
+                   dpi=600, plot=last_plot(),
                    scale=1.25,
                    base_width = 5, base_height = 8)
 
@@ -682,7 +686,7 @@ plot_grid(plotlist = area_list, ncol=3, nrow=3)
 ggsave(plot=last_plot(),
        filename = "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/rss_diel_pattern.svg",
        device = "svg",
-       dpi=300, 
+       dpi=600, 
        scale=1.25,
        width = 8, height = 8)
 
@@ -1075,5 +1079,235 @@ magick::image_write(magick::image_convert(magick::image_read(
                                           format = "png"),
   "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/density_params.png")
 
+## maps from chapter II
+
+library(dplyr)
+library(ggplot2)
+library(cowplot)
+library(ggnewscale)
+library(cowplot)
+
+mma_for_study = st_read("C:/Users/lugf0001/Documents/maps-and-moose//01_data/shapes/mma_data/Stratum2024.shp")
+
+mma_for_study = mma_for_study %>% 
+  rename(id = AFOID_LANS) 
+# works?
+sw = rgeoboundaries::gb_adm0("Sweden") %>% 
+  st_transform(3006)
+
+ggplot() +
+  geom_sf(data=mma_for_study,fill="white") +
+  geom_sf(data=sw, fill="transparent", color="red") +
+  geom_sf(data=plot(st_intersection(sw,mma_for_study )) , fill=NA, color="blue")
+
+mma_for_study = (st_intersection(sw,mma_for_study ))
 
 
+shp=st_read("C:/Users/lugf0001/Documents/maps-and-moose/01_data/shapes/final_shape_for_calcs/map_final_plot.shp")
+
+# Create summarized datasets for each variable
+vars <- list(
+  moose_dens = "Moose density",
+  prop_young_forest = "Young forest proportion",
+  calf_weight = "Calf weight",
+  rase_density_hectar = "Råse density",
+  nr_days_with_snow = "Days with snow",
+  moose_equivalent = "Moose equivalent",
+  calves_per_adult_female = "Calves per female"
+)
+
+model_data = read.csv("C:/Users/lugf0001/Documents/maps-and-moose/01_data/model_data.csv")
+
+
+browsing_data = model_data %>%  
+  filter(coverage_by_als>=0.5) %>% 
+  #filter(mma %in% read.csv("C:/Users/lugf0001/Documents/maps-and-moose/01_data/test_train/oskar_base_data.csv")$ID) %>% 
+  select(#log_scaled_moose_dens, log_scaled_pine_dens, log_scaled_snow_depth, scaled_nr_days_with_snow,
+    year, mma, region, 
+    winter_density,
+    nrof_pines, Jaktarea,
+    Area_ha,
+    max_snowdepth,
+    nr_days_with_snow,
+    mean_scanning_year,
+    yearly_damaged_pines,
+    young_forest_ha,
+    ecological_zone, 
+    pine_mean_hectar,
+    birch_density_km2,
+    rase_density_hectar, 
+    # get responses
+    rase_sum_km2,
+    moose_equivalent,
+    female_calf_weight, bull_calf_weight,
+    calves_per_adult_female,
+    prop_of_adult_bulls, female_calf_weight,
+    vegetation_period_length,
+    coverage_by_als,
+    birch_mean_km2,
+    rase_mean_km2,
+    pine_mean_km2)  %>%
+  mutate(
+    
+    # some quick replacemenets and calculations that are needed
+    
+    max_snowdepth = replace_na(max_snowdepth, 0),
+    nr_days_with_snow = replace_na(nr_days_with_snow, 0),
+    
+    time_difference_skanning = year - mean_scanning_year,
+    abs_time_difference_skanning = abs(time_difference_skanning),
+    numerical_browsing_damage = log(log(1 / (1 - yearly_damaged_pines))),
+    browsing_damage_proportion = yearly_damaged_pines,
+    
+    
+    ## preporare predictors
+    # proportion forest
+    prop_young_forest = (young_forest_ha / Area_ha)*100,
+    moose_dens = winter_density,
+    # moose and pine density
+    pine_dens = nrof_pines / Jaktarea,
+    log_scaled_moose_dens = scale(log(winter_density), center = TRUE, scale = TRUE)[,1],
+    log_scaled_pine_dens  = scale(log(nrof_pines / Jaktarea), center = TRUE, scale = TRUE)[,1],
+    
+    
+    
+    scaled_moose_dens = scale(winter_density, center = TRUE, scale = TRUE)[,1],
+    scaled_pine_dens  = scale(nrof_pines / Area_ha , center = TRUE, scale = TRUE)[,1],
+    scaled_pine_dens_squared  = scale(I(nrof_pines / Area_ha )^2, center = TRUE, scale = TRUE)[,1],
+    scaled_pine_dens_cubed = scale(I(nrof_pines / Area_ha )^3, center = TRUE, scale = TRUE)[,1],
+    
+    scaled_moose_equivalent =  scale(moose_equivalent, center = TRUE, scale = TRUE)[,1],
+    scaled_moose_equivalent_squared =  scale(I(moose_equivalent^2), center = TRUE, scale = TRUE)[,1],
+    scaled_moose_equivalent_cubed =  scale(I(moose_equivalent^3), center = TRUE, scale = TRUE)[,1],
+    
+    log_scaled_moose_equivalent =  scale(log(moose_equivalent), center = TRUE, scale = TRUE)[,1],
+    
+    birch_density = birch_density_km2,
+    
+    # climatic preparation
+    scaled_nr_days_with_snows = scale(nr_days_with_snow, center = TRUE, scale = TRUE)[,1],
+    scaled_nr_days_with_snow_squared = scale(I(nr_days_with_snow^2), center = TRUE, scale = TRUE)[,1],
+    scaled_nr_days_with_snow_cubed = scale(I(nr_days_with_snow^3), center = TRUE, scale = TRUE)[,1],
+    
+    log_scaled_snow_depth = scale(log(max_snowdepth + 0.0001), center = TRUE, scale = TRUE)[,1],
+    scaled_snow_depth     = scale(max_snowdepth, center = TRUE, scale = TRUE)[,1],
+    log_scaled_nr_days_with_snow = scale(log(nr_days_with_snow + 0.0001), center = TRUE, scale = TRUE)[,1],
+    scaled_nr_days_with_snow = scale((nr_days_with_snow), center = TRUE, scale = TRUE)[,1],
+    scaled_nr_days_with_snow_squared = scale(I(nr_days_with_snow^2), center = TRUE, scale = TRUE)[,1],
+    
+    scale_vegetation_period_length = scale(vegetation_period_length),
+    # spatial environment
+    scaled_log_prop_young_forest = scale(log(prop_young_forest)),
+    scaled_prop_young_forest = scale((prop_young_forest)),
+    scaled_prop_young_forest_squared = scale(I(prop_young_forest^2)),
+    scaled_prop_young_forest_cubed = scale(I(prop_young_forest^3)),
+    
+    scaled_rase_km2 = scale(rase_mean_km2),
+    scaled_rase_km2_squared = scale(I(rase_mean_km2^2)),
+    scaled_rase_km2_cubed = scale(I(rase_mean_km2^3)),,
+    
+    log_scaled_rase_km2 = scale(log(rase_mean_km2+.0001)),
+    scaled_rase_km2 = scale(log(birch_mean_km2+.0001)),
+    log_scaled_pine_km2 = scale(log(pine_mean_km2+0.0001)),
+    rase_density =  I(rase_sum_km2/Jaktarea),
+    scaled_rase_density = scale(rase_density),
+    scaled_rase_density_squared = scale(I(rase_density^2)),
+    scaled_rase_density_cubed =  scale(I(rase_density^3)),
+    scaled_birch= scale(birch_mean_km2),
+    scaled_birch_squared = scale(I(birch_mean_km2^2)),
+    scaled_birch_cubed =  scale(I(birch_mean_km2^3)),
+    scaled_birch_density= scale(birch_density_km2),
+    scaled_birch_density_squared = scale(I(birch_density_km2^2)),
+    scaled_birch_density_cubed =  scale(I(birch_density_km2^3)),
+    # scaled_rase_density = scale(rase_density_hectar),
+    # scaled_rase_density_squared = scale(I(rase_density_hectar^2)),,
+    # scaled_rase_density_cubed = scale(I(rase_density_hectar^3)),
+    log_scaled_rase_density= scale(log(rase_density_hectar+.0001)),
+    pine_mean_km2 = pine_mean_km2,
+    scaled_birch_km2 = scale((birch_mean_km2)),
+    scaled_pine_km2 = scale((pine_mean_km2))) %>% 
+  rowwise() %>% 
+  mutate(calf_weight = mean(c(female_calf_weight,bull_calf_weight), na.rm=T)) %>% 
+  ungroup() %>% 
+  select(-c(winter_density,nrof_pines, Jaktarea,max_snowdepth,
+            #nr_days_with_snow,
+            mean_scanning_year,
+            yearly_damaged_pines,
+            young_forest_ha)) %>% 
+  mutate(ecological_zone = ifelse(ecological_zone=="Nemoral Zone", "Hemi-Boreal Zone", ecological_zone)) %>% 
+  filter(!is.na(log_scaled_moose_dens)) 
+base_data <- shp %>%
+  rename(mma= LANAFO) %>% 
+  left_join(train)
+
+test= browsing_data %>% 
+  # remove everything with a higher time difference than 3.5 (as 3.51 would suggest being closer to 4 years)
+  filter(abs_time_difference_skanning>=3.5);nrow(test)
+train <- browsing_data %>% 
+  # remove everything with a higher time difference than 3.5 (as 3.51 would suggest being closer to 4 years)
+  filter(abs_time_difference_skanning<=3.5);nrow(train)#%>%
+#  anti_join(test, by = colnames(df)) %>% 
+#  mutate(ecological_zone = ifelse(ecological_zone=="Nemoral Zone", "Hemi-Boreal Zone", ecological_zone))
+# Base spatial data
+base_data <- shp %>%
+  rename(mma= LANAFO) %>% 
+  left_join(train)
+
+
+make_plot <- function(var, title, palette_option) {
+  tmp <- base_data %>%
+    left_join(
+      train %>%
+        group_by(mma) %>%
+        summarize(mean = mean(.data[[var]]), .groups = "drop")
+    ) 
+  ggplot(tmp) +
+    geom_sf(dat =  mma_for_study, fill="grey80", inherit.aes = F) +
+    geom_sf(aes(fill = mean)) +
+    scale_fill_viridis_c(option = palette_option) +
+    labs(title = title, fill = title) +
+    theme_minimal()+
+    theme(legend.position ="bottom",
+          text = element_text(size=26,
+                              family = "EB Garamond"),
+          # fine here...
+          legend.title = element_blank())
+}
+
+# Create individual plots with different palettes
+p1 <- make_plot("moose_dens", "Moose density", "A")
+p2 <- make_plot("prop_young_forest", "Young forest", "B")
+p4 <- make_plot("rase_density", "RASE density", "D")
+p5 <- make_plot("nr_days_with_snow", "Snow days", "E")
+p6 <- make_plot("moose_equivalent", "Moose equivalent", "F")
+p8 <- make_plot("pine_dens", "Pine density", "G")
+p10 <- make_plot("birch_density", "Birch density", "E")
+
+p3 <- make_plot("calf_weight", "Calf weight", "C")
+p9 <- make_plot("browsing_damage_proportion", "Browsing Damage", "G")
+p7 <- make_plot("calves_per_adult_female", "Calves per female", "D")
+
+
+plot = cowplot::plot_grid(
+  p1, p8, p5, p2,p4,p8,p10,
+  ncol=7)
+
+
+ggsave2(plot=plot,
+       device="png",
+       dpi=300,
+       width=16,
+       height=9,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/predictars_chapter_2.png")
+
+plot = cowplot::plot_grid(
+  p3,p7,p9,
+  ncol=3)
+
+
+ggsave2(plot=plot,
+        device="png",
+        dpi=300,
+        width=10,
+       height=8,
+        "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/responses_ch2.png")

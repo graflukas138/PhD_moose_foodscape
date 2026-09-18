@@ -2,6 +2,41 @@ library(tidyverse)
 library(ggh4x)
 set.seed(1235)
 
+
+library(showtext)
+library(ggplot2)
+library(extrafont)
+
+font_import()
+
+loadfonts()
+font_add_google("EB Garamond", "EB Garamond")
+showtext_auto()
+#extrafont::font_import()
+extrafont::loadfonts(device = "pdf")
+set_null_device(cairo_pdf)
+
+showtext_auto()
+theme_set(theme(text = element_text(family="EB Garamond")))
+
+
+theme_set(theme_void())
+theme_set(
+  theme_get() +
+    theme(
+      text = element_text(family = "EB Garamond"),
+      plot.title = element_text(family = "EB Garamond"),
+      plot.subtitle = element_text(family = "EB Garamond"),
+      plot.caption = element_text(family = "EB Garamond"),
+      axis.title = element_text(family = "EB Garamond"),
+      axis.text = element_text(family = "EB Garamond"),
+      legend.title = element_text(family = "EB Garamond"),
+      legend.text = element_text(family = "EB Garamond"),
+      strip.text = element_text(family = "EB Garamond")
+    )
+)
+
+
 #-----------------------------
 # Simulate a GPS track
 #-----------------------------
@@ -59,21 +94,24 @@ ggplot(track, aes(x,y)) +
     Foraging  ="#d95f02",
     Traveling ="#7570b3"
   )) +
-  theme_classic(base_size = 15) +
+  #theme_classic(base_size = 15) +
   labs(
     x = "",
     y = "",
     color = "Behavioural state"
   )+
   theme_void()+
-  theme(    panel.background = element_rect(fill="white"))
+  theme(
+    panel.background = element_rect(fill="NA",
+                                    color="transparent"),
+        legend.text = element_text(family = "EB Garamond"))
 
 ggsave(plot=last_plot(),
-       device = "png",
-       dpi=500,
+       device = "svg",
+       dpi=600,
        width=5,
        height=5,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/noHMM.jpg")
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/noHMM.svg")
 
 ggplot(track, aes(x,y, color=state,
                   group="1")) +
@@ -94,23 +132,25 @@ ggplot(track, aes(x,y, color=state,
   )+
   theme_void()+
   theme(
-    panel.background = element_rect(fill="white"),
+    panel.background = element_rect(fill="NA",
+                                    color="transparent"),
     legend.position = c(0.12, 0.88),
     legend.justification = c(0, 1),
     legend.background = element_rect(
       fill = scales::alpha("white", 0.7),
       colour = NA
     ),
-    legend.key = element_blank()
+    legend.key = element_blank(),
+    legend.text = element_text(family = "EB Garamond"),
+    
   )
 
-
 ggsave(plot=last_plot(),
-       device = "png",
-       dpi=500,
+       device = "svg",
+       dpi=600,
        width=5,
        height=5,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM.jpg")
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM.svg")
 
 
 rand = track %>%
@@ -205,14 +245,17 @@ ggplot() +
   theme_void(base_size = 15) +
   
   theme(
-    panel.background = element_rect(fill = "white"),
     legend.position = c(0.12, 0.88),
     legend.justification = c(0, 1),
     legend.background = element_rect(
       fill = scales::alpha("white", 0.7),
       colour = NA
     ),
-    legend.key = element_blank()
+    legend.key = element_blank(),
+    legend.title = element_text(family = "EB Garamond"),
+    legend.text = element_text(family = "EB Garamond"),
+    panel.background = element_rect(fill="NA",
+                                    color="transparent"),
   ) +
   xlim(c(min(c(track$x, track$x)), max(c(track$x, track$x)))) +
   ylim(c(min(c(track$y, track$y)), max(c(track$y, track$y))))
@@ -220,9 +263,9 @@ ggplot() +
 
 
 ggsave(plot=last_plot(),
-       device = "png",
+       device = "svg",
        dpi=500,
        width=5,
        height=5,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM_issa.jpg")
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/HMM_issa.svg")
 

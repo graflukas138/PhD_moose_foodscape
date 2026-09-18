@@ -5,6 +5,47 @@ library(tidyverse)
 
 set.seed(1236)
 
+library(showtext)
+library(ggplot2)
+library(extrafont)
+
+font_import()
+
+loadfonts()
+font_add_google("EB Garamond", "EB Garamond")
+showtext_auto()
+#extrafont::font_import()
+extrafont::loadfonts(device = "pdf")
+set_null_device(cairo_pdf)
+
+showtext_auto()
+theme_set(theme(text = element_text(family="EB Garamond")))
+
+
+theme_set(theme_bw())
+theme_set(
+  theme_get() +
+    theme(
+      text = element_text(family = "EB Garamond"),
+      plot.title = element_text(family = "EB Garamond"),
+      plot.subtitle = element_text(family = "EB Garamond"),
+      plot.caption = element_text(family = "EB Garamond"),
+      #axis.title = element_text(family = "EB Garamond"),
+      #axis.text = element_text(family = "EB Garamond"),
+      legend.title = element_text(family = "EB Garamond"),
+      #legend.text = element_text(family = "EB Garamond"),
+      #strip.text = element_text(family = "EB Garamond"),
+      axis.title = element_blank(),
+      axis.text = element_blank(),
+      #legend.title = element_text(size = 12),
+      #legend.text = element_text(size = 11),
+      strip.text = element_text(size = 12),
+      legend.position = "bottom",
+      legend.text = element_blank()
+      
+    )
+)
+
 # Create a raster with 1000 cells (40 x 25 = 1000)
 r <- rast(nrows = 500, ncols = 500)
 
@@ -66,20 +107,6 @@ names(r_stack) = c("low_correlation", "medium_correlation", "perfect_correlation
 
 r_df = as.data.frame(r_stack, xy=T) 
 
-theme_set(
-  theme_bw() +
-    theme(
-      text = element_text(size = 12),
-      axis.title = element_blank(),
-      axis.text = element_blank(),
-      legend.title = element_text(size = 12),
-      #legend.text = element_text(size = 11),
-      strip.text = element_text(size = 12),
-      legend.position = "bottom",
-      legend.text = element_blank()
-    )
-)
-
 p1 = ggplot(r_df, aes(x,y, fill=low_correlation)) +
   geom_tile() +
   coord_equal() +
@@ -114,10 +141,18 @@ p1|p2|p3
 
 
 ggsave(plot=last_plot(),
-       device = "png",
+       device = "svg",
        dpi=500,
        width=10,
        height=5,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/autocorrelation.jpg")
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/autocorrelation.svg")
+
+
+ggsave(plot=last_plot(),
+       device = "pdf",
+       dpi=500,
+       width=10,
+       height=5,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/autocorrelation.pdf")
 
 

@@ -14,6 +14,41 @@ library(dplyr)
 library(ggnewscale)
 library(ggpattern)
 
+
+library(showtext)
+library(ggplot2)
+library(extrafont)
+
+font_import()
+
+loadfonts()
+font_add_google("EB Garamond", "EB Garamond")
+showtext_auto()
+#extrafont::font_import()
+extrafont::loadfonts(device = "pdf")
+set_null_device(cairo_pdf)
+
+showtext_auto()
+theme_set(theme(text = element_text(family="EB Garamond")))
+
+
+theme_set(theme_bw())
+theme_set(
+  theme_get() +
+    theme(
+      text = element_text(family = "EB Garamond"),
+      plot.title = element_text(family = "EB Garamond"),
+      plot.subtitle = element_text(family = "EB Garamond"),
+      plot.caption = element_text(family = "EB Garamond"),
+      axis.title = element_text(family = "EB Garamond"),
+      axis.text = element_text(family = "EB Garamond"),
+      legend.title = element_text(family = "EB Garamond"),
+      legend.text = element_text(family = "EB Garamond"),
+      strip.text = element_text(family = "EB Garamond")
+    )
+)
+
+
 pt = st_point(c(0,0))
 pt = (st_sfc(pt))
 pt2 = st_point(c(-1,0))
@@ -143,30 +178,62 @@ plot = ggplot() +
     values = c(NA, "snub_trihexagonal","pythagorean"),
     name = "browsing treatment",
     labels=c("control","20% browsing", "60% browsing"))+
-  theme(legend.title = element_text(size=12),
+  theme(
+    legend.title = element_text(size=12),
         legend.text = element_text(size=10),
         legend.key.size = unit(1, 'cm'), #change legend key size
         legend.key.height = unit(1, 'cm'), #change legend key height
         legend.key.width = unit(1, 'cm'))+
   geom_sf(data = browsed %>% st_buffer(.06),
           color="white", linewidth=.8,
-          fill="transparent");plot
-
+          fill="transparent")+
+  theme(text =element_text(family="EB Garamond"));plot
 
 
 ggsave(plot = plot,
-       device = "png",
-       dpi=300,
+       device = "svg",
+       dpi=600,
        width = 10,
        height = 7,
-       "03_figures/experimental_setup_BB.png")
+       "03_figures/experimental_setup_BB.svg")
 
 ggsave(plot = plot,
-       device = "png",
-       dpi=300,
+       device = "svg",
+       dpi=600,
        width = 10,
        height = 7,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/experimental_setup_BB.png")
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/experimental_setup_BB.svg")
+
+
+ggsave(plot = plot,
+       device = "svg",
+       dpi=600,
+       width = 10,
+       height = 7,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/experimental_setup_BB.svg")
+
+ggsave(plot = plot,
+       device = "pdf",
+       dpi=600,
+       width = 10,
+       height = 7,
+       "03_figures/experimental_setup_BB.pdf")
+
+ggsave(plot = plot,
+       device = "pdf",
+       dpi=600,
+       width = 10,
+       height = 7,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/pres_only_figures/experimental_setup_BB.pdf")
+
+
+ggsave(plot = plot,
+       device = "pdf",
+       dpi=600,
+       width = 10,
+       height = 7,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/experimental_setup_BB.pdf")
+
 
 library(rgeoboundaries)
 library(patchwork)
@@ -196,7 +263,8 @@ stand_plot = ggplot() +
   geom_sf(data=stands %>% st_buffer(1e3), fill="#6B8E23")+
   theme_map()+
   ggspatial::annotation_north_arrow(location="tr")+
-  ggspatial::annotation_scale(location="br")
+  ggspatial::annotation_scale(location="br")+
+  theme(text= element_text(family="EB Garamond"))
 
 (sweden | stand_plot) /
   plot +
@@ -205,19 +273,36 @@ stand_plot = ggplot() +
                        panel.background = element_rect(fill = 'white', colour = 'white'))
 
 ggsave(plot = last_plot(),
-       device = "png",
+       device = "svg",
        dpi=300,
        width = 10,
        height = 7,
-       "03_figures/sweden_stands.png",
+       "03_figures/sweden_stands.svg",
 )
 
 ggsave(plot = last_plot(),
-       device = "png",
+       device = "svg",
        dpi=300,
        width = 10,
        height = 7,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/sweden_stands.png",
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/sweden_stands.svg",
+)
+
+
+ggsave(plot = last_plot(),
+       device = "pdf",
+       dpi=300,
+       width = 10,
+       height = 7,
+       "03_figures/sweden_stands.pdf",
+)
+
+ggsave(plot = last_plot(),
+       device = "pdf",
+       dpi=300,
+       width = 10,
+       height = 7,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/sweden_stands.pdf",
 )
 
 
@@ -242,21 +327,34 @@ final_plot <- plot_grid(
 final_plot
 
 ggsave(plot = final_plot,
-       device = "png",
+       device = "svg",
        dpi=300,
        width = 6,
        height = 9,
-       "03_figures/sweden_stands2.png",
+       "03_figures/sweden_stands2.svg",
 )
 ggsave(plot = last_plot(),
-       device = "png",
+       device = "svg",
        dpi=300,
        width = 10,
        height = 7,
-       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/sweden_stands2.png",
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/sweden_stands2.svg",
 )
 
 
 
-
+ggsave(plot = final_plot,
+       device = "pdf",
+       dpi=300,
+       width = 6,
+       height = 9,
+       "03_figures/sweden_stands2.pdf",
+)
+ggsave(plot = last_plot(),
+       device = "pdf",
+       dpi=300,
+       width = 10,
+       height = 7,
+       "C:/Users/lugf0001/My Drive/papers in writing/PhD - thesis/images/sweden_stands2.pdf",
+)
 
